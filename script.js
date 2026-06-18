@@ -210,7 +210,6 @@ const translations = {
     'Book Your AI Workflow Audit': 'Pesan Audit Workflow AI Anda',
     'Discuss a 14-Day Agent Pilot': 'Diskusikan Pilot Agen 14 Hari',
     'Safe AI agents for the operational workflows Indonesian businesses already run every day.': 'Agen AI yang aman untuk workflow operasional yang sudah dijalankan bisnis Indonesia setiap hari.',
-    'Quick actions': 'Aksi cepat',
     'Language': 'Bahasa',
     'Select language': 'Pilih bahasa',
     'Chat on WhatsApp': 'Chat di WhatsApp',

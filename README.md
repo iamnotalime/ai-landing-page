@@ -28,7 +28,7 @@ python3 -m http.server 8080
 
 Then visit `http://localhost:8080`.
 
-Use the floating language selector to switch between English and Indonesian. You can also test direct language URLs with `?lang=en` or `?lang=id`.
+Use the navigation language selector to switch between English and Indonesian. You can also test direct language URLs with `?lang=en` or `?lang=id`.
 
 ## Production notes
 
