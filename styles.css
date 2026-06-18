@@ -80,6 +80,7 @@ img, svg { max-width: 100%; }
   padding: 18px clamp(16px, 4vw, 44px) 0;
 }
 .nav {
+  position: relative;
   max-width: var(--max);
   margin: 0 auto;
   min-height: 68px;
@@ -111,6 +112,13 @@ img, svg { max-width: 100%; }
 .brand-copy { display: grid; line-height: 1.03; }
 .brand-copy strong { font-family: var(--display); font-size: 1.18rem; font-weight: 780; }
 .brand-copy small { font-family: var(--mono); font-size: .67rem; text-transform: uppercase; letter-spacing: .14em; color: var(--muted); }
+.nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-left: auto;
+}
 .nav-menu { display: flex; align-items: center; gap: 4px; }
 .nav-menu a {
   padding: 12px 14px;
@@ -125,12 +133,15 @@ img, svg { max-width: 100%; }
   position: relative;
   display: inline-flex;
   align-items: center;
+  z-index: 1002;
 }
 .language-trigger {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  justify-content: center;
   min-height: 46px;
+  min-width: 66px;
   border: 0;
   border-radius: 999px;
   padding: 12px 14px;
@@ -159,6 +170,7 @@ img, svg { max-width: 100%; }
   position: absolute;
   top: calc(100% + 10px);
   right: 0;
+  z-index: 1003;
   min-width: 190px;
   padding: 8px;
   border: 1px solid rgba(20,19,15,.13);
@@ -749,7 +761,8 @@ input[type="range"] { accent-color: var(--lime); width: 100%; }
 
 @media (max-width: 760px) {
   .site-header { padding-top: 12px; }
-  .nav { border-radius: 26px; align-items: flex-start; }
+  .nav { border-radius: 26px; align-items: center; }
+  .nav-actions { gap: 8px; }
   .nav-toggle { display: block; }
   .nav-menu {
     display: none;
@@ -766,22 +779,9 @@ input[type="range"] { accent-color: var(--lime); width: 100%; }
     box-shadow: var(--shadow);
   }
   .nav-menu.open { display: flex; }
-  .nav-menu a, .language-switcher, .language-trigger { width: 100%; }
-  .language-switcher { display: block; }
-  .language-trigger { justify-content: space-between; }
-  .language-menu {
-    position: static;
-    display: none;
-    min-width: 0;
-    margin-top: 6px;
-    box-shadow: none;
-    backdrop-filter: none;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: none;
-  }
-  .language-switcher.open .language-menu { display: grid; }
+  .nav-menu a { width: 100%; }
+  .language-trigger { min-height: 48px; min-width: 66px; padding-inline: 13px; }
+  .language-menu { right: 0; min-width: 176px; }
   .hero { padding-top: 54px; }
   .hero h1 { font-size: clamp(3.6rem, 17vw, 6rem); }
   .hero-subtitle { font-size: 1rem; }
