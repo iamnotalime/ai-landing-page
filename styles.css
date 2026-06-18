@@ -238,7 +238,8 @@ img, svg { max-width: 100%; }
 .workflow-card.large { margin-bottom: 14px; }
 .card-header { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: .73rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
 .card-header small { margin-left: auto; }
-.card-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #25d366; color: #062a15; font-weight: 800; }
+.card-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #25d366; color: #062a15; font-weight: 800; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+.card-icon:hover, .card-icon:focus-visible { transform: translateY(-1px); box-shadow: 0 0 0 4px rgba(37,211,102,.22); outline: none; }
 .workflow-card p { margin: 16px 0 0; line-height: 1.55; font-size: .98rem; }
 .agent-route { display: flex; align-items: center; gap: 8px; margin: 15px 0; font-family: var(--mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; }
 .agent-route span { padding: 8px 9px; border-radius: 999px; background: var(--ink); color: var(--paper); }

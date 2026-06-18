@@ -31,6 +31,6 @@ Then visit `http://localhost:8080`.
 ## Production notes
 
 - Connect the modal form to your CRM, email service, or backend endpoint.
-- Replace `hello@agentops.id` with your real email.
+- Update the WhatsApp number in `index.html` if the business contact changes.
 - Add analytics only after privacy review.
 - Keep the human-approval and safety language prominent for serious B2B buyers.
