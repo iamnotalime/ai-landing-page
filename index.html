@@ -43,13 +43,23 @@
         <a href="#offers">Offers</a>
         <a href="#safety">Safety</a>
         <a href="#process">Process</a>
-        <label class="language-switcher">
-          <span class="sr-only">Language</span>
-          <select id="language-select" aria-label="Select language">
-            <option value="en">EN</option>
-            <option value="id">ID</option>
-          </select>
-        </label>
+        <div class="language-switcher" id="language-switcher">
+          <span class="sr-only" id="language-label">Language</span>
+          <button class="language-trigger" id="language-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="language-menu" aria-labelledby="language-label language-current">
+            <span id="language-current">EN</span>
+            <span class="language-caret" aria-hidden="true"></span>
+          </button>
+          <div class="language-menu" id="language-menu" role="listbox" aria-labelledby="language-label" aria-hidden="true">
+            <button class="language-option" type="button" role="option" data-language-option="en" aria-selected="true">
+              <span>English</span>
+              <small>EN</small>
+            </button>
+            <button class="language-option" type="button" role="option" data-language-option="id" aria-selected="false">
+              <span>Indonesia</span>
+              <small>ID</small>
+            </button>
+          </div>
+        </div>
         <a class="nav-cta" href="#audit">Book audit</a>
       </div>
     </nav>

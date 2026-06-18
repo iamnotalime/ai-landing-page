@@ -212,6 +212,7 @@ const translations = {
     'Safe AI agents for the operational workflows Indonesian businesses already run every day.': 'Agen AI yang aman untuk workflow operasional yang sudah dijalankan bisnis Indonesia setiap hari.',
     'Language': 'Bahasa',
     'Select language': 'Pilih bahasa',
+    'English': 'Inggris',
     'Chat on WhatsApp': 'Chat di WhatsApp',
     'Workflow audit request': 'Permintaan audit workflow',
     'Tell us the repetitive workflow you want to fix.': 'Ceritakan workflow repetitif yang ingin Anda perbaiki.',
@@ -360,8 +361,12 @@ function applyLanguage(language) {
   updateRoi();
   storeLanguage(nextLanguage);
 
-  const languageSelect = document.querySelector('#language-select');
-  if (languageSelect) languageSelect.value = nextLanguage;
+  const languageCurrent = document.querySelector('#language-current');
+  if (languageCurrent) languageCurrent.textContent = nextLanguage.toUpperCase();
+
+  document.querySelectorAll('[data-language-option]').forEach((option) => {
+    option.setAttribute('aria-selected', String(option.dataset.languageOption === nextLanguage));
+  });
 }
 
 const revealItems = document.querySelectorAll('[data-reveal]');
@@ -431,6 +436,40 @@ auditForm?.addEventListener('submit', (event) => {
   window.setTimeout(() => toast?.classList.remove('show'), 4200);
 });
 
-const languageSelect = document.querySelector('#language-select');
-languageSelect?.addEventListener('change', (event) => applyLanguage(event.target.value));
+const languageSwitcher = document.querySelector('#language-switcher');
+const languageTrigger = document.querySelector('#language-trigger');
+const languageOptions = document.querySelectorAll('[data-language-option]');
+
+function setLanguageMenuOpen(isOpen) {
+  if (!languageSwitcher || !languageTrigger) return;
+  languageSwitcher.classList.toggle('open', isOpen);
+  languageTrigger.setAttribute('aria-expanded', String(isOpen));
+  document.querySelector('#language-menu')?.setAttribute('aria-hidden', String(!isOpen));
+}
+
+languageTrigger?.addEventListener('click', () => {
+  setLanguageMenuOpen(!languageSwitcher?.classList.contains('open'));
+});
+
+languageOptions.forEach((option) => {
+  option.addEventListener('click', () => {
+    applyLanguage(option.dataset.languageOption);
+    setLanguageMenuOpen(false);
+    languageTrigger?.focus();
+  });
+});
+
+document.addEventListener('click', (event) => {
+  if (!languageSwitcher?.contains(event.target)) {
+    setLanguageMenuOpen(false);
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    setLanguageMenuOpen(false);
+    languageTrigger?.focus();
+  }
+});
+
 applyLanguage(currentLanguage);
