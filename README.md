@@ -6,7 +6,7 @@ A responsive, production-ready static landing page for **AgentOps Indonesia**.
 
 - `index.html` — page structure and content
 - `styles.css` — responsive visual system, layout, animation, and components
-- `script.js` — mobile navigation, scroll reveals, ROI calculator, and audit modal behavior
+- `script.js` — mobile navigation, scroll reveals, language switching, ROI calculator, and audit modal behavior
 
 ## Design direction
 
@@ -27,6 +27,8 @@ python3 -m http.server 8080
 ```
 
 Then visit `http://localhost:8080`.
+
+Use the floating language selector to switch between English and Indonesian. You can also test direct language URLs with `?lang=en` or `?lang=id`.
 
 ## Production notes
 

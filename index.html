@@ -69,7 +69,7 @@
           </div>
           <div class="workflow-card large">
             <div class="card-header">
-              <a class="card-icon" href="https://wa.me/6288808399025?text=Hi%20AgentOps%20Indonesia%2C%20I%20want%20to%20discuss%20an%20AI%20workflow%20audit." target="_blank" rel="noopener" aria-label="Chat with AgentOps Indonesia on WhatsApp">WA</a>
+              <a class="card-icon" href="https://wa.me/6288808399025?text=Hi%20AgentOps%20Indonesia%2C%20I%20want%20to%20discuss%20an%20AI%20workflow%20audit." target="_blank" rel="noopener" aria-label="Chat with AgentOps Indonesia on WhatsApp" data-wa-message="audit">WA</a>
               <span>Incoming Request</span>
               <small>08:42 WIB</small>
             </div>
@@ -400,7 +400,7 @@
         <p>Do not start with a massive AI transformation project. Start with one workflow that wastes time every week. We will help you map it, build it, test it, deploy it safely, and measure the result.</p>
         <div class="hero-actions">
           <button class="btn btn-primary" type="button" data-open-modal>Book Your AI Workflow Audit</button>
-          <a class="btn btn-secondary" href="https://wa.me/6288808399025?text=Hi%20AgentOps%20Indonesia%2C%20I%20want%20to%20discuss%20a%2014-Day%20Agent%20Pilot." target="_blank" rel="noopener">Discuss a 14-Day Agent Pilot</a>
+          <a class="btn btn-secondary" href="https://wa.me/6288808399025?text=Hi%20AgentOps%20Indonesia%2C%20I%20want%20to%20discuss%20a%2014-Day%20Agent%20Pilot." target="_blank" rel="noopener" data-wa-message="pilot">Discuss a 14-Day Agent Pilot</a>
         </div>
       </div>
     </section>
@@ -425,11 +425,20 @@
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/6288808399025?text=Hi%20AgentOps%20Indonesia%2C%20I%20want%20to%20discuss%20an%20AI%20workflow%20audit." target="_blank" rel="noopener" aria-label="Chat with AgentOps Indonesia on WhatsApp" title="Chat on WhatsApp">
-    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-      <path d="M16 4.1c-6.5 0-11.8 5.2-11.8 11.6 0 2.1.6 4.1 1.6 5.8L4 28l6.8-1.8c1.6.9 3.4 1.3 5.2 1.3 6.5 0 11.8-5.2 11.8-11.6S22.5 4.1 16 4.1Zm0 21.3c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-4 .9 1.1-3.8-.2-.4c-1-1.5-1.5-3.2-1.5-5 0-5.2 4.2-9.4 9.5-9.4s9.5 4.2 9.5 9.4-4.3 9.7-9.6 9.7Zm5.2-7.1c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.6-1.5-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.8.6.8.2 1.4.2 2 .1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.5-.4Z" />
-    </svg>
-  </a>
+  <div class="floating-toolbar" aria-label="Quick actions">
+    <label class="language-switcher">
+      <span class="sr-only">Language</span>
+      <select id="language-select" aria-label="Select language">
+        <option value="en">EN</option>
+        <option value="id">ID</option>
+      </select>
+    </label>
+    <a class="whatsapp-float" href="https://wa.me/6288808399025?text=Hi%20AgentOps%20Indonesia%2C%20I%20want%20to%20discuss%20an%20AI%20workflow%20audit." target="_blank" rel="noopener" aria-label="Chat with AgentOps Indonesia on WhatsApp" title="Chat on WhatsApp" data-wa-message="audit">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path d="M16 4.1c-6.5 0-11.8 5.2-11.8 11.6 0 2.1.6 4.1 1.6 5.8L4 28l6.8-1.8c1.6.9 3.4 1.3 5.2 1.3 6.5 0 11.8-5.2 11.8-11.6S22.5 4.1 16 4.1Zm0 21.3c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-4 .9 1.1-3.8-.2-.4c-1-1.5-1.5-3.2-1.5-5 0-5.2 4.2-9.4 9.5-9.4s9.5 4.2 9.5 9.4-4.3 9.7-9.6 9.7Zm5.2-7.1c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.6-1.5-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.8.6.8.2 1.4.2 2 .1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.5-.4Z" />
+      </svg>
+    </a>
+  </div>
 
   <dialog class="audit-modal" id="audit-modal" aria-labelledby="modal-title">
     <form method="dialog" class="modal-card" id="audit-form">
